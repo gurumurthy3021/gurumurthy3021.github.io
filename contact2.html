@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Magi Aari Works</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background-color: #800020;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border: 2px solid rgb(221, 221, 55);
+}
+
+.navbar a {
+  color: white;
+  background-color: rgb(213, 110, 110);
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid rgb(221, 221, 55);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ---------- HOME SECTION ---------- */
+.home {
+  text-align: center;
+  padding: 60px 15px;
+}
+
+.home h1 {
+  color: #800020;
+  font-size: 28px;
+}
+
+.home p {
+  font-size: 18px;
+  color: #800020;
+  border: 2px solid #800020;
+  background-color: #ae506791;
+  border-radius: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* ---------- SOCIAL LINKS ---------- */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  background-color: #ae506791;
+  border: 2px solid #800020;
+  padding: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.box a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  width: 95%;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.instagram, .whatsapp {
+  background: #ffffff;
+  border: 2px solid black;
+}
+
+/* ---------- FEEDBACK ---------- */
+.feedback {
+  text-align: center;
+  color: #800020;
+  margin-top: 30px;
+}
+
+.feedback-form {
+  background-color: #800020;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid rgb(221, 221, 55);
+  border-radius: 10px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 94%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.feedback-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.feedback-form button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background: #0056b3;
+}
+
+/* ---------- TABLET & DESKTOP ---------- */
+@media (min-width: 768px) {
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .home p {
+    font-size: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="home2.html">Home</a>
+  <a href="designs2.html">Designs</a>
+  <a href="contact2.html">Contact</a>
+</div>
+
+<div class="home">
+  <h1>✨ Magi Aari Works ✨</h1>
+  <p>Handcrafted Aari Designs</p>
+</div>
+
+<div class="social-links">
+  <div class="box">
+    <p>Click to know more details →</p>
+    <a class="instagram" href="https://www.instagram.com/_magi_aari_works_" target="_blank">
+      Instagram
+    </a>
+  </div>
+
+  <div class="box">
+    <p>Click to know more details →</p>
+    <a class="whatsapp" href="https://wa.me/qr/HXNXHRYNNONKL1" target="_blank">
+      WhatsApp
+    </a>
+  </div>
+</div>
+
+<div class="feedback">
+  <h2>Feedback Form</h2>
+</div>
+
+<form class="feedback-form">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Feedback" required></textarea>
+  <button type="submit">Send Feedback</button>
+</form>
+ <script>
+    document.querySelector(".feedback-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const feedback = document.querySelector('textarea').value;
+
+    const adminPhone = "7305281922"; 
+
+    const message =
+        `New Feedback Received:%0A` +
+        `Name: ${name}%0A` +
+        `Email: ${email}%0A` +
+        `Feedback: ${feedback}`;
+
+    window.open(`https://wa.me/${adminPhone}?text=${message}`, "_blank");
+});
+</script>
+
+</body>
+</html>

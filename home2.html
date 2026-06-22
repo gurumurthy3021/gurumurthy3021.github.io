@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aari Work Boutique</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #800020;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgb(221, 221, 55);
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(213, 110, 110);
+    border: 2px solid rgb(221, 221, 55);
+    border-radius: 10px;
+    padding: 8px 14px;
+}
+
+/* HERO CONTAINER */
+.container {
+    position: relative;
+    text-align: center;
+    padding: 150px 10px;
+    margin: 20px;
+    background: #ffffffcc;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 2s ease;
+}
+
+/* TITLE */
+.title {
+    font-size: 32px;
+    color: #7b2cbf;
+    animation: stitch 3s ease forwards;
+}
+
+.title span {
+    display: block;
+    font-size: 36px;
+    color: #c9184a;
+    margin-top: 10px;
+}
+
+/* FLOWERS */
+.flower {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center,#fa7194,transparent 31%),
+        radial-gradient(circle at top,#f67897,transparent 31%),
+        radial-gradient(circle at bottom,#ff92ad,transparent 31%),
+        radial-gradient(circle at left,#fcaabe,transparent 31%),
+        radial-gradient(circle at right,#ffd6e0,transparent 31%);
+    animation: bloom 6s infinite linear;
+}
+
+.left { left: -25px; }
+.right { right: -25px; }
+
+/* DESIGN SECTION */
+.design {
+    background-color: #800020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid rgb(221, 221, 55);
+}
+
+.design h3 {
+    color: aliceblue;
+    margin: 0;
+    font-size: 16px;
+}
+
+.design a {
+    border: 2px solid rgb(255, 242, 0);
+    background-color: rgb(213, 110, 110);
+    padding: 8px 16px;
+    color: aliceblue;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.design a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* ANIMATIONS */
+@keyframes bloom {
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+@keyframes stitch {
+    from { letter-spacing: 10px; opacity: 0; }
+    to { letter-spacing: 2px; opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 📱 MOBILE EXTRA SMALL */
+@media (max-width: 480px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .title span {
+        font-size: 30px;
+    }
+
+    .flower {
+        display: none;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 6px auto;
+        width: 80%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="home2.html">Home</a>
+    <a href="contact2.html">Contact</a>
+</div>
+
+<div class="container">
+    <h1 class="title">
+        Welcome to
+        <span>✨ Magi Aari Works ✨</span>
+    </h1>
+    <div class="flower left"></div>
+    <div class="flower right"></div>
+</div>
+
+<div class="design">
+    <h3>Click here to see designs</h3>
+    <a href="designs2.html">Designs</a>
+</div>
+
+</body>
+</html>
